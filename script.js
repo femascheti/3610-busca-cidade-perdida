@@ -3,33 +3,53 @@ const btnBuscar = document.querySelector(".buscar");
 btnBuscar.addEventListener("click", continuarBusca);
 
 function continuarBusca() {
-    const estado = prompt("Com base nas dicas da carta, em qual estado começa nossa busca?");
+    const cliqueBotao = prompt("Com base nas dicas da carta, em qual estado começa nossa busca?");
 
-    if (estado === null) {
+    if (cliqueBotao === null) {
         return;
     }
 
-    const respostaNormalizada = estado.toLowerCase();
+    const respostaNormalizada = cliqueBotao.toLowerCase();
 
     if (respostaNormalizada.includes("pernambuco")) {
         mensagemPernambuco();
-    } else if (respostaNormalizada.includes("tocantins")) {
-        mensagemTocantins();
-    } else if (respostaNormalizada.includes("acre")) {
-        mensagemAcre();
     } else {
-        alert("Parece que estamos no caminho errado. As pistas não apontam para este estado. Vamos tentar novamente.");
+        alert("Infelizmente não era essa cidade. Ouvi dizer que a Sofia tomou uma água de coco com Alceu Valença agora!");
     }
 }
 
 function mensagemPernambuco() {
-    alert("Você descobriu a pista escondida em Pernambuco! Agora, precisamos seguir um estado pipipopo");
+    const pernambuco = prompt("Cheguei no Pernambuco e encontrei um cartão postal de um monumento .... EU não faço ideia do que isso significa. Você sabe que estado é este?");
+
+    if (pernambuco === null) {
+        return;
+    }
+
+    const respostaNormalizada = pernambuco.toLowerCase();
+
+    if (respostaNormalizada.includes("tocantins")) {
+        mensagemTocantins();
+    } else {
+        alert("Infelizmente não era esse estado. Ouvi dizer pipipopo");
+    }
 }
 
 function mensagemTocantins() {
-    alert("Incrível! Lá no Tocantins encontramos um chaveiro de pipipopo");
+    const tocantins = prompt("Cheguei no Tocantins e encontrei uma mala deixada aqui. Esta mala tinha um chaveiro de ... isso significa alguma coisa para você?");
+
+    if (tocantins === null) {
+        return;
+    }
+
+    const respostaNormalizada = tocantins.toLowerCase();
+
+    if (respostaNormalizada.includes("acre")) {
+        mensagemAcre();
+    } else {
+        alert("Infelizmente não era esse estado. Ouvi dizer pipipopo");
+    }
 }
 
 function mensagemAcre() {
-    alert("Finalmente, após uma longa jornada através de Pernambuco, Tocantins e Acre, encontramos a cidade perdida! Sua ajuda foi essencial para desvendar esse mistério. Obrigado!")
+    alert("Finalmente achei a cidade perdida! pipipopo");
 }
