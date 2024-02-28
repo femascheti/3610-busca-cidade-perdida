@@ -51,5 +51,5 @@ function mensagemTocantins() {
 }
 
 function mensagemAcre() {
-    alert("Finalmente achei a cidade perdida! pipipopo");
+    alert("Eu vim para o Acre e tive que andar muito para encontrar a cidade perdida. Conversei com pessoas que me ajudaram a encontrar a cidade mais linda que já vi. Aqui tudo é verde, podemos nos alimentar de frutos naturais e tomar banho de rio.Adoraria que vocês pudessem ver este lugar. Obrigada por me acompanhar nesta aventura.");
 }
